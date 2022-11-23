@@ -1,0 +1,103 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-form {
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    color: var(--background-color);
+    background-color: #188ce8;
+  }
+}
+
+.checkbox-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__border {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+    background-color: var(--primary-white-color);
+    background-origin: border-box;
+    z-index: -1;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill-opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.checkbox-control__input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+  
+  .checkbox-contol__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-contol__input:checked+.checkbox-control__border {
+  border: none;
+  background-color: var(--accent-color);
+  fill: var(--primary-background-color);
+}
+
+.checkbox-control__label {
+  display: block;
+  padding-left: 20px;
+  line-height: 1.71;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--checkbox-label-color);
+  cursor: pointer;
+}
+
+.checkbox-control__label a {
+  color: var(--accent-color);
+}
+
+.checkbox-control__button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 52px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: var(--background-color-form-button);
+    color: var(--text-color);
+
+  }
+}
